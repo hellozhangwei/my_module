@@ -1,0 +1,13 @@
+<odoo>
+     <record id="action_all_customers_cn" model="ir.actions.act_window">
+        <field name="name">所有客户</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('customer_rank', '>', 0)]</field>
+        <field name="context">{'lang': 'zh_CN', 'default_lang': 'zh_CN', 'active_test':False, 'default_customer_rank':1}</field>
+    </record>
+
+    <menuitem id="menu_my_module_top_level" name="My Module" web_icon="my_module,static/description/icon.png"/>
+    <menuitem id="menu_all_customers_cn" parent="menu_my_module_top_level" action="action_all_customers_cn" sequence="10"/>
+
+</odoo>
